@@ -1,0 +1,15 @@
+const { google } = require('googleapis');
+const path = require('path');
+const fs = require('fs');
+
+// Path to your service account key file
+const SERVICE_ACCOUNT_KEY_FILE = path.join(__dirname, 'apikey.json');
+
+const auth = new google.auth.GoogleAuth({
+  keyFile: SERVICE_ACCOUNT_KEY_FILE,
+  scopes: ['https://www.googleapis.com/auth/drive.file'],
+});
+
+const drive = google.drive({ version: 'v3', auth });
+
+module.exports = drive;

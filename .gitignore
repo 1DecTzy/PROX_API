@@ -1,0 +1,9 @@
+# Ignore .env file
+.env
+
+# Ignore sensitive files
+/apikey.json
+
+# Ignore node_modules directory
+/node_modules
+
